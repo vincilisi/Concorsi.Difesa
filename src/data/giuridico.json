@@ -1,0 +1,134 @@
+{
+    "label": "St. Giuridico",
+    "href": "/giuridico",
+    "dropdown": [
+        {
+            "label": "Cessazione Anticipata Ufficiali 2025",
+            "href": "/giuridico/cessazione-ufficiali-2025"
+        },
+        {
+            "label": "Cessazione Anticipata Marescialli 2025",
+            "href": "/giuridico/cessazione-marescialli-2025"
+        },
+        {
+            "label": "Raff. VFP4 EI",
+            "href": "/giuridico/raff-vfp4-ei"
+        },
+        {
+            "label": "Raff. VFP4 MM",
+            "href": "/giuridico/raff-vfp4-mm"
+        },
+        {
+            "label": "Raff. VFP4 AM",
+            "href": "/giuridico/raff-vfp4-am"
+        },
+        {
+            "label": "Avanz. Dir/Amm.Gen. SPE EI 2025",
+            "href": "/giuridico/avanz-dir-ammgen-ei-2025"
+        },
+        {
+            "label": "Avanz. Brig. Gen. SPE EI 2025",
+            "href": "/giuridico/avanz-briggen-ei-2025"
+        },
+        {
+            "label": "Avanz. Ten. Col. SPE EI 2025",
+            "href": "/giuridico/avanz-tencol-ei-2025"
+        },
+        {
+            "label": "Avanz. Col. SPE EI 2025",
+            "href": "/giuridico/avanz-col-ei-2025"
+        },
+        {
+            "label": "Avanz. Gen. B. SPE EI 2025",
+            "href": "/giuridico/avanz-genb-ei-2025"
+        },
+        {
+            "label": "Avanz. Gen. C.A. SPE EI 2025",
+            "href": "/giuridico/avanz-genca-ei-2025"
+        },
+        {
+            "label": "Avanz. Gen. D. SPE EI 2025",
+            "href": "/giuridico/avanz-gend-ei-2025"
+        },
+        {
+            "label": "Avanz. Contramm. MM 2025",
+            "href": "/giuridico/avanz-contramm-mm-2025"
+        },
+        {
+            "label": "Avanz. Amm. Div MM 2025",
+            "href": "/giuridico/avanz-ammd-mm-2025"
+        },
+        {
+            "label": "Avanz. Amm. Squ MM 2025",
+            "href": "/giuridico/avanz-amms-mm-2025"
+        },
+        {
+            "label": "Avanz. C.F SPE MM 2025",
+            "href": "/giuridico/avanz-cf-mm-2025"
+        },
+        {
+            "label": "Avanz. T.V SPE MM 2025",
+            "href": "/giuridico/avanz-tv-mm-2025"
+        },
+        {
+            "label": "Avanz. C.V SPE MM 2025",
+            "href": "/giuridico/avanz-cv-mm-2025"
+        },
+        {
+            "label": "Avanz. Gen. D. SPE CC 2025",
+            "href": "/giuridico/avanz-gend-cc-2025"
+        },
+        {
+            "label": "Avanz. Gen. C.A SPE CC 2025",
+            "href": "/giuridico/avanz-genca-cc-2025"
+        },
+        {
+            "label": "Avanz. Gen. B SPE CC 2025",
+            "href": "/giuridico/avanz-genb-cc-2025"
+        },
+        {
+            "label": "Avanz. Col. SPE CC 2025",
+            "href": "/giuridico/avanz-col-cc-2025"
+        },
+        {
+            "label": "Avanz. Ten. Col. SPE CC 2025",
+            "href": "/giuridico/avanz-tencol-cc-2025"
+        },
+        {
+            "label": "Avanz. Magg. SPE CC 2025",
+            "href": "/giuridico/avanz-magg-cc-2025"
+        },
+        {
+            "label": "Avanz. Cap. SPE CC 2025",
+            "href": "/giuridico/avanz-cap-cc-2025"
+        },
+        {
+            "label": "Avanz. Gen. D. SPE AM 2025",
+            "href": "/giuridico/avanz-gend-am-2025"
+        },
+        {
+            "label": "Avanz. Gen. C.A. SPE AM 2025",
+            "href": "/giuridico/avanz-genca-am-2025"
+        },
+        {
+            "label": "Avanz. Gen. B. SPE AM 2025",
+            "href": "/giuridico/avanz-genb-am-2025"
+        },
+        {
+            "label": "Avanz. Col. SPE AM 2025",
+            "href": "/giuridico/avanz-col-am-2025"
+        },
+        {
+            "label": "Avanz. Ten. Col. SPE AM 2025",
+            "href": "/giuridico/avanz-tencol-am-2025"
+        },
+        {
+            "label": "Avanz. Magg. SPE AM 2025",
+            "href": "/giuridico/avanz-magg-am-2025"
+        },
+        {
+            "label": "Avanz. Cap. SPE AM 2025",
+            "href": "/giuridico/avanz-cap-am-2025"
+        }
+    ]
+}

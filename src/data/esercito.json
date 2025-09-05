@@ -1,0 +1,106 @@
+{
+    "label": "Esercito",
+    "href": "/esercito",
+    "dropdown": [
+        {
+            "label": "Accademia",
+            "href": "/esercito/accademia"
+        },
+        {
+            "label": "Allievi Marescialli",
+            "href": "/esercito/allievi-marescialli"
+        },
+        {
+            "label": "Allievi Marescialli Interno Titoli ed Esami",
+            "href": "/esercito/allievi-marescialli-interno-titoli-esami"
+        },
+        {
+            "label": "Allievi Marescialli Int. Straordinario 2023",
+            "href": "/esercito/allievi-marescialli-straordinario-2023"
+        },
+        {
+            "label": "AUFP",
+            "href": "/esercito/aufp"
+        },
+        {
+            "label": "Categorie Protette",
+            "href": "/esercito/categorie-protette"
+        },
+        {
+            "label": "Marescialli Nomina Diretta",
+            "href": "/esercito/nomina-diretta"
+        },
+        {
+            "label": "Concorsi Struttura Banda Musicale",
+            "href": "/esercito/banda-musicale"
+        },
+        {
+            "label": "RR Armi e Corpi",
+            "href": "/esercito/rr-armi-corpi"
+        },
+        {
+            "label": "RR Ruolo CSA Str. 2023",
+            "href": "/esercito/rr-csa-2023"
+        },
+        {
+            "label": "RS Straordinario Psicologi",
+            "href": "/esercito/rs-psicologi"
+        },
+        {
+            "label": "RS Fer. LGT",
+            "href": "/esercito/rs-fer-lgt"
+        },
+        {
+            "label": "RS Straordinario",
+            "href": "/esercito/rs-straordinario"
+        },
+        {
+            "label": "Scuole Militari",
+            "href": "/esercito/scuole-militari"
+        },
+        {
+            "label": "Sottufficiali Interno",
+            "href": "/esercito/sottufficiali-interno"
+        },
+        {
+            "label": "VFP4 Recenti Interno Titoli ed Esami",
+            "href": "/esercito/vfp4-recenti-interno"
+        },
+        {
+            "label": "Sottufficiali Interno Straordinario 2023",
+            "href": "/esercito/sottufficiali-straordinario-2023"
+        },
+        {
+            "label": "VFP4 2023",
+            "href": "/esercito/vfp4-2023"
+        },
+        {
+            "label": "VFP4 2024",
+            "href": "/esercito/vfp4-2024"
+        },
+        {
+            "label": "VFP4 2023 Specializzati",
+            "href": "/esercito/vfp4-2023-specializzati"
+        },
+        {
+            "label": "VFP4 2024 Specializzati",
+            "href": "/esercito/vfp4-2024-specializzati"
+        },
+        {
+            "label": "VFP1 2023",
+            "href": "/esercito/vfp1-2023"
+        },
+        {
+            "label": "VFP1 2024",
+            "href": "/esercito/vfp1-2024"
+        },
+        {
+            "label": "VSP 2023",
+            "href": "/esercito/vsp-2023"
+        },
+        {
+            "label": "VSP Raff.",
+            "href": "/esercito/vsp-raff"
+        }
+    ]
+}

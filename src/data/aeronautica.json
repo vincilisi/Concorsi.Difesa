@@ -1,0 +1,110 @@
+{
+    "label": "Aeronautica",
+    "href": "/aeronautica",
+    "dropdown": [
+        {
+            "label": "Accademia",
+            "href": "/aeronautica/accademia"
+        },
+        {
+            "label": "Allievi Marescialli",
+            "href": "/aeronautica/allievi-marescialli"
+        },
+        {
+            "label": "Allievi Marescialli Interno",
+            "href": "/aeronautica/allievi-marescialli-interno"
+        },
+        {
+            "label": "Allievi Marescialli Interno (Solo Titoli)",
+            "href": "/aeronautica/allievi-marescialli-titoli"
+        },
+        {
+            "label": "Allievi Marescialli Straordinario 2023",
+            "href": "/aeronautica/allievi-marescialli-straordinario-2023"
+        },
+        {
+            "label": "AUFP",
+            "href": "/aeronautica/aufp"
+        },
+        {
+            "label": "Categorie Protette",
+            "href": "/aeronautica/categorie-protette"
+        },
+        {
+            "label": "Marescialli Nomina Diretta",
+            "href": "/aeronautica/nomina-diretta"
+        },
+        {
+            "label": "Banda Musicale",
+            "href": "/aeronautica/banda-musicale"
+        },
+        {
+            "label": "RM Armi e Corpi",
+            "href": "/aeronautica/rm-armi-corpi"
+        },
+        {
+            "label": "RS Corpi Vari",
+            "href": "/aeronautica/rs-corpi-vari"
+        },
+        {
+            "label": "RS Sanitario Straordinario",
+            "href": "/aeronautica/rs-sanitario-straordinario"
+        },
+        {
+            "label": "RS Piloti",
+            "href": "/aeronautica/rs-piloti"
+        },
+        {
+            "label": "RS Riordino",
+            "href": "/aeronautica/rs-riordino"
+        },
+        {
+            "label": "Scuola Militare",
+            "href": "/aeronautica/scuola-militare"
+        },
+        {
+            "label": "Sergenti Interno Titoli",
+            "href": "/aeronautica/sergenti-titoli"
+        },
+        {
+            "label": "Sergenti Interno Titoli ed Esami",
+            "href": "/aeronautica/sergenti-titoli-esami"
+        },
+        {
+            "label": "Sergenti Interno Straordinario 2023",
+            "href": "/aeronautica/sergenti-straordinario-2023"
+        },
+        {
+            "label": "VFP1 2023",
+            "href": "/aeronautica/vfp1-2023"
+        },
+        {
+            "label": "VFP1 2024",
+            "href": "/aeronautica/vfp1-2024"
+        },
+        {
+            "label": "VFP4 2023",
+            "href": "/aeronautica/vfp4-2023"
+        },
+        {
+            "label": "VFP4 2024",
+            "href": "/aeronautica/vfp4-2024"
+        },
+        {
+            "label": "VFP4 Straordinario",
+            "href": "/aeronautica/vfp4-straordinario"
+        },
+        {
+            "label": "VSP 2023",
+            "href": "/aeronautica/vsp-2023"
+        },
+        {
+            "label": "VSP 2024",
+            "href": "/aeronautica/vsp-2024"
+        },
+        {
+            "label": "VSP Straordinario CP",
+            "href": "/aeronautica/vsp-straordinario-cp"
+        }
+    ]
+}

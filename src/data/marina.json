@@ -1,0 +1,110 @@
+{
+    "label": "Marina",
+    "href": "/marina",
+    "dropdown": [
+        {
+            "label": "Accademia",
+            "href": "/marina/accademia"
+        },
+        {
+            "label": "Allievi Marescialli",
+            "href": "/marina/allievi-marescialli"
+        },
+        {
+            "label": "Allievi Marescialli Interno",
+            "href": "/marina/allievi-marescialli-interno"
+        },
+        {
+            "label": "Allievi Marescialli Interno (Solo Titoli)",
+            "href": "/marina/allievi-marescialli-titoli"
+        },
+        {
+            "label": "Allievi Marescialli Straordinario 2023",
+            "href": "/marina/allievi-marescialli-straordinario-2023"
+        },
+        {
+            "label": "AUFP_AUPC",
+            "href": "/marina/aufp-aupc"
+        },
+        {
+            "label": "Categorie Protette",
+            "href": "/marina/categorie-protette"
+        },
+        {
+            "label": "Marescialli Nomina Diretta",
+            "href": "/marina/nomina-diretta"
+        },
+        {
+            "label": "Orchestra Banda Musicale",
+            "href": "/marina/banda-musicale"
+        },
+        {
+            "label": "RM Armi e Corpi",
+            "href": "/marina/rm-armi-corpi"
+        },
+        {
+            "label": "RS Corpi Vari",
+            "href": "/marina/rs-corpi-vari"
+        },
+        {
+            "label": "RS Sanitario Straordinario",
+            "href": "/marina/rs-sanitario-straordinario"
+        },
+        {
+            "label": "RS Piloti",
+            "href": "/marina/rs-piloti"
+        },
+        {
+            "label": "RS Riordino",
+            "href": "/marina/rs-riordino"
+        },
+        {
+            "label": "Scuola Navale Militare",
+            "href": "/marina/scuola-navale"
+        },
+        {
+            "label": "Sergenti Interno Titoli",
+            "href": "/marina/sergenti-titoli"
+        },
+        {
+            "label": "Sergenti Interno Titoli ed Esami",
+            "href": "/marina/sergenti-titoli-esami"
+        },
+        {
+            "label": "Sergenti Interno Straordinario 2023",
+            "href": "/marina/sergenti-straordinario-2023"
+        },
+        {
+            "label": "VFP4 2023",
+            "href": "/marina/vfp4-2023"
+        },
+        {
+            "label": "VFP4 2024",
+            "href": "/marina/vfp4-2024"
+        },
+        {
+            "label": "VFI 2023",
+            "href": "/marina/vfi-2023"
+        },
+        {
+            "label": "VFI 2024",
+            "href": "/marina/vfi-2024"
+        },
+        {
+            "label": "VFP4 Straordinario",
+            "href": "/marina/vfp4-straordinario"
+        },
+        {
+            "label": "VSP 2023",
+            "href": "/marina/vsp-2023"
+        },
+        {
+            "label": "VSP 2024",
+            "href": "/marina/vsp-2024"
+        },
+        {
+            "label": "VSP Straordinario CP",
+            "href": "/marina/vsp-straordinario-cp"
+        }
+    ]
+}
