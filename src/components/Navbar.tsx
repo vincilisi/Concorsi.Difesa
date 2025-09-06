@@ -132,8 +132,6 @@ export default function Navbar() {
 
                 {/* Desktop menu */}
                 <nav ref={dropdownRef} className="hidden lg:flex justify-center items-center space-x-6 mt-4 relative z-40">
-                    import Link from 'next/link';
-
                     <Link href="/" className="flex items-center space-x-1 text-black hover:text-blue-900">
                         <IoHomeSharp />
                         <span>Home</span>
@@ -188,7 +186,10 @@ export default function Navbar() {
             {/* Mobile menu (rimasto invariato) */}
             {mobileOpen && (
                 <div ref={dropdownRef} className="lg:hidden bg-[#003366] px-4 py-2 space-y-2">
-                    <a href="/" className="block text-white hover:bg-[#002244] px-3 py-2 rounded">Home</a>
+                    <Link href="/" className="block text-white hover:bg-[#002244] px-3 py-2 rounded">
+                        Home
+                    </Link>
+
                     {menuItems.map((item) => (
                         <div key={item.label}>
                             <button
