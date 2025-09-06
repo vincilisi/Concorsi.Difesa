@@ -5,18 +5,29 @@ import { FaSearch, FaSignInAlt } from 'react-icons/fa';
 import { IoHomeSharp } from 'react-icons/io5';
 import { MdKeyboardArrowDown } from 'react-icons/md';
 import { RxCross2, RxHamburgerMenu } from 'react-icons/rx';
+import { motion, AnimatePresence } from 'framer-motion';
+import { supabase } from '@/lib/supabase';
 
-import esercito from '@/data/esercito.json';
-import marina from '@/data/marina.json';
-import aeronautica from '@/data/aeronautica.json';
-import giuridico from '@/data/giuridico.json';
-import persociv from '@/data/persociv.json';
+type MenuItem = {
+    id: number;
+    label: string;
+    href: string;
+    parent_id: number | null;
+    visible: boolean;
+    ord: number;
+};
+
+type MenuGroup = {
+    label: string;
+    href: string;
+    dropdown: { label: string; href: string }[];
+};
 
 export default function Navbar() {
     const [mobileOpen, setMobileOpen] = useState(false);
     const [openDropdown, setOpenDropdown] = useState<string | null>(null);
     const [openMobileDropdown, setOpenMobileDropdown] = useState<string | null>(null);
-
+    const [menuItems, setMenuItems] = useState<MenuGroup[]>([]);
     const dropdownRef = useRef<HTMLDivElement>(null);
 
     const toggleDropdown = (label: string) => {
@@ -27,21 +38,44 @@ export default function Navbar() {
         setOpenMobileDropdown(openMobileDropdown === label ? null : label);
     };
 
-    const menuItems = [
-        esercito,
-        marina,
-        aeronautica,
-        giuridico,
-        persociv,
-        { label: 'Archivio', href: '/archivio', dropdown: [] }
-    ];
+    useEffect(() => {
+        const fetchMenu = async () => {
+            const { data, error } = await supabase
+                .from('menu_items')
+                .select('*')
+                .eq('visible', true)
+                .order('ord', { ascending: true });
+
+            if (error) {
+                console.error('Errore nel recupero menu:', error.message);
+                return;
+            }
+
+            const mainItems = data.filter((item: MenuItem) => item.parent_id === null);
+            const dropdownItems = data.filter((item: MenuItem) => item.parent_id !== null);
+
+            const grouped: MenuGroup[] = mainItems.map((main) => ({
+                label: main.label,
+                href: main.href,
+                dropdown: dropdownItems
+                    .filter((sub) => sub.parent_id === main.id)
+                    .map((sub) => ({
+                        label: sub.label,
+                        href: sub.href,
+                    })),
+            }));
+
+            grouped.push({ label: 'Archivio', href: '/archivio', dropdown: [] });
+
+            setMenuItems(grouped);
+        };
+
+        fetchMenu();
+    }, []);
 
     useEffect(() => {
         const handleClickOutside = (event: MouseEvent) => {
-            if (
-                dropdownRef.current &&
-                !dropdownRef.current.contains(event.target as Node)
-            ) {
+            if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
                 setOpenDropdown(null);
                 setOpenMobileDropdown(null);
             }
@@ -66,7 +100,7 @@ export default function Navbar() {
                         />
                     </div>
                     <div className="flex justify-center">
-                        <span className="font-bold text-3xl text-center text-black">Concorsi Online</span>
+                        <span className="font-bold text-4xl text-center text-black">Concorsi Online</span>
                     </div>
                     <div className="hidden lg:flex justify-end items-center space-x-4">
                         <div className="relative">
@@ -96,48 +130,58 @@ export default function Navbar() {
                 </div>
 
                 {/* Desktop menu */}
-                <nav
-                    ref={dropdownRef}
-                    className="hidden lg:flex justify-center items-center space-x-6 mt-4 relative z-40"
-                >
+                <nav ref={dropdownRef} className="hidden lg:flex justify-center items-center space-x-6 mt-4 relative z-40">
                     <a href="/" className="flex items-center space-x-1 text-black hover:text-blue-900">
                         <IoHomeSharp />
                         <span>Home</span>
                     </a>
 
                     {menuItems.map((item) => (
-                        <div key={item.label} className="relative">
-                            <button
-                                onClick={() => toggleDropdown(item.label)}
-                                className="flex items-center space-x-1 text-black font-medium hover:text-blue-900"
-                            >
-                                <span>{item.label}</span>
-                                {item.dropdown.length > 0 && (
-                                    <MdKeyboardArrowDown
-                                        className={`transition-transform duration-300 text-2xl ${openDropdown === item.label ? 'rotate-180' : ''
-                                            }`}
-                                    />
-                                )}
-                            </button>
-                            {openDropdown === item.label && item.dropdown.length > 0 && (
-                                <div className="absolute top-full left-0 mt-2 w-64 bg-[#DDDDDD] shadow-lg rounded border border-[#CCCCCC] z-50">
-                                    {item.dropdown.map((sub) => (
-                                        <a
-                                            key={sub.label}
-                                            href={sub.href}
-                                            className="block px-4 py-2 text-black hover:bg-[#CCCCCC]"
-                                        >
-                                            {sub.label}
-                                        </a>
-                                    ))}
-                                </div>
+                        <button
+                            key={item.label}
+                            onClick={() => toggleDropdown(item.label)}
+                            className="flex items-center space-x-1 text-black font-medium hover:text-blue-900"
+                        >
+                            <span>{item.label}</span>
+                            {item.dropdown.length > 0 && (
+                                <MdKeyboardArrowDown
+                                    className={`transition-transform duration-300 text-2xl ${openDropdown === item.label ? 'rotate-180' : ''}`}
+                                />
                             )}
-                        </div>
+                        </button>
                     ))}
+
+                    {/* Accordion laterale */}
+                    <AnimatePresence>
+                        {openDropdown && (
+                            <motion.div
+                                initial={{ x: 300, opacity: 0 }}
+                                animate={{ x: 0, opacity: 1 }}
+                                exit={{ x: 300, opacity: 0 }}
+                                transition={{ duration: 0.3 }}
+                                className="fixed top-[110px] right-0 w-72 h-[calc(100vh-100px)] bg-[#DDDDDD] shadow-md border-l border-gray-300 z-50 overflow-y-auto"
+                            >
+                                <div className="p-4">
+                                    <h2 className="text-lg font-semibold mb-2">{openDropdown}</h2>
+                                    {menuItems
+                                        .find((group) => group.label === openDropdown)
+                                        ?.dropdown.map((sub) => (
+                                            <a
+                                                key={sub.label}
+                                                href={sub.href}
+                                                className="block px-3 py-2 text-black hover:bg-[#CCCCCC] rounded"
+                                            >
+                                                {sub.label}
+                                            </a>
+                                        ))}
+                                </div>
+                            </motion.div>
+                        )}
+                    </AnimatePresence>
                 </nav>
             </div>
 
-            {/* Mobile menu */}
+            {/* Mobile menu (rimasto invariato) */}
             {mobileOpen && (
                 <div ref={dropdownRef} className="lg:hidden bg-[#003366] px-4 py-2 space-y-2">
                     <a href="/" className="block text-white hover:bg-[#002244] px-3 py-2 rounded">Home</a>
@@ -150,8 +194,7 @@ export default function Navbar() {
                                 <span>{item.label}</span>
                                 {item.dropdown.length > 0 && (
                                     <MdKeyboardArrowDown
-                                        className={`transition-transform duration-300 text-xl ${openMobileDropdown === item.label ? 'rotate-180' : ''
-                                            }`}
+                                        className={`transition-transform duration-300 text-xl ${openMobileDropdown === item.label ? 'rotate-180' : ''}`}
                                     />
                                 )}
                             </button>
