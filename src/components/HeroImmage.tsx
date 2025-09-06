@@ -1,6 +1,7 @@
 'use client';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import Link from 'next/link'; // 👈 aggiungi questo
 
 export default function HeroIntro() {
     return (
@@ -12,14 +13,14 @@ export default function HeroIntro() {
                 transition={{ duration: 1.8, ease: 'easeOut' }}
                 className="w-full h-[200px] relative"
             >
-                <a href="#">
+                <Link href="#">
                     <Image
                         src="/img/aeronautica.png"
                         alt="Logo Aeronautica"
                         fill
                         className="object-contain rounded shadow-md"
                     />
-                </a>
+                </Link>
             </motion.div>
 
             {/* Marina */}
@@ -29,14 +30,14 @@ export default function HeroIntro() {
                 transition={{ duration: 1.8, ease: 'easeOut' }}
                 className="w-full h-[200px] relative"
             >
-                <a href="#">
+                <Link href="#">
                     <Image
                         src="/img/marina.png"
                         alt="Logo Marina"
                         fill
                         className="object-contain rounded shadow-md"
                     />
-                </a>
+                </Link>
             </motion.div>
 
             {/* Esercito */}
@@ -46,14 +47,14 @@ export default function HeroIntro() {
                 transition={{ duration: 1.8, ease: 'easeOut' }}
                 className="w-full h-[200px] relative"
             >
-                <a href="#">
+                <Link href="#">
                     <Image
                         src="/img/esercito.png"
                         alt="Logo Esercito"
                         fill
                         className="object-contain rounded shadow-md"
                     />
-                </a>
+                </Link>
             </motion.div>
 
             {/* Carabinieri */}
@@ -63,14 +64,14 @@ export default function HeroIntro() {
                 transition={{ duration: 1.8, ease: 'easeOut' }}
                 className="w-full h-[200px] relative"
             >
-                <a href="#">
+                <Link href="#">
                     <Image
                         src="/img/carabbinieri.png"
                         alt="Logo Carabinieri"
                         fill
                         className="object-contain rounded shadow-md"
                     />
-                </a>
+                </Link>
             </motion.div>
         </div>
     );
