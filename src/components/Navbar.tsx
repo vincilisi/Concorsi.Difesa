@@ -7,6 +7,7 @@ import { MdKeyboardArrowDown } from 'react-icons/md';
 import { RxCross2, RxHamburgerMenu } from 'react-icons/rx';
 import { motion, AnimatePresence } from 'framer-motion';
 import { supabase } from '@/lib/supabase';
+import Link from 'next/link';
 
 type MenuItem = {
     id: number;
@@ -131,10 +132,13 @@ export default function Navbar() {
 
                 {/* Desktop menu */}
                 <nav ref={dropdownRef} className="hidden lg:flex justify-center items-center space-x-6 mt-4 relative z-40">
-                    <a href="/" className="flex items-center space-x-1 text-black hover:text-blue-900">
+                    import Link from 'next/link';
+
+                    <Link href="/" className="flex items-center space-x-1 text-black hover:text-blue-900">
                         <IoHomeSharp />
                         <span>Home</span>
-                    </a>
+                    </Link>
+
 
                     {menuItems.map((item) => (
                         <button
